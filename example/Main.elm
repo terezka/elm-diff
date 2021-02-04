@@ -48,7 +48,16 @@ main =
 
         Err err ->
           Ui.Diff.viewError err
-    , Html.p [] [ Html.text "Written by Tereza Sokol." ]
+    , Html.p []
+      [ Html.text "Written by "
+      , Html.a
+        [ Attr.href "https://twitter.com/tereza_sokol"
+        , Attr.style "color" "rgb(5, 142, 218)"
+        , Attr.style "text-decoration" "none"
+        ]
+        [ Html.text "Tereza Sokol" ]
+      , Html.text "."
+      ]
     ]
 
 

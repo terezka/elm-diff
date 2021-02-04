@@ -6636,7 +6636,20 @@ var $terezka$elm_diff$Main$main = A2(
 			_List_Nil,
 			_List_fromArray(
 				[
-					$elm$html$Html$text('Written by Tereza Sokol.')
+					$elm$html$Html$text('Written by '),
+					A2(
+					$elm$html$Html$a,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$href('https://twitter.com/tereza_sokol'),
+							A2($elm$html$Html$Attributes$style, 'color', 'rgb(5, 142, 218)'),
+							A2($elm$html$Html$Attributes$style, 'text-decoration', 'none')
+						]),
+					_List_fromArray(
+						[
+							$elm$html$Html$text('Tereza Sokol')
+						])),
+					$elm$html$Html$text('.')
 				]))
 		]));
 _Platform_export({'Main':{'init':_VirtualDom_init($terezka$elm_diff$Main$main)(0)(0)}});}(this));
