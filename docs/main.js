@@ -6549,11 +6549,22 @@ var $terezka$elm_diff$Main$main = A2(
 				[
 					$elm$html$Html$text('A parser for `git diff` output written in Elm. Includes flexible view helpers, too!'),
 					A2(
-					$elm$html$Html$code,
+					$elm$html$Html$p,
 					_List_Nil,
 					_List_fromArray(
 						[
-							$elm$html$Html$text('$ elm install terezka/elm-diff')
+							A2(
+							$elm$html$Html$code,
+							_List_fromArray(
+								[
+									A2($elm$html$Html$Attributes$style, 'padding', '5px 10px'),
+									A2($elm$html$Html$Attributes$style, 'background', 'whitesmoke'),
+									A2($elm$html$Html$Attributes$style, 'border-radius', '5px')
+								]),
+							_List_fromArray(
+								[
+									$elm$html$Html$text('$ elm install terezka/elm-diff')
+								]))
 						]))
 				])),
 			function () {
