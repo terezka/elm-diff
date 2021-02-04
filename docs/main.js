@@ -6546,7 +6546,7 @@ var $terezka$elm_diff$Main$main = A2(
 			_List_Nil,
 			_List_fromArray(
 				[
-					$elm$html$Html$text('A parser and view helper for `git diff` output written in Elm.')
+					$elm$html$Html$text('A parser for `git diff` output written in Elm. Includes flexible view helpers, too!')
 				])),
 			function () {
 			var _v0 = $terezka$elm_diff$Diff$fromString($terezka$elm_diff$Main$exampleDiff);

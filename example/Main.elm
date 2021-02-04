@@ -14,7 +14,7 @@ main =
     , Attr.style "margin" "50px auto"
     ]
     [ Html.h1 [] [ Html.text "elm diff" ]
-    , Html.p [] [ Html.text "A parser and view helper for `git diff` output written in Elm." ]
+    , Html.p [] [ Html.text "A parser for `git diff` output written in Elm. Includes flexible view helpers, too!" ]
     , case Diff.fromString exampleDiff of
         Ok diffs ->
           Html.div
