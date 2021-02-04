@@ -4534,6 +4534,7 @@ var $elm$virtual_dom$VirtualDom$toHandlerInt = function (handler) {
 			return 3;
 	}
 };
+var $elm$html$Html$a = _VirtualDom_node('a');
 var $elm$html$Html$code = _VirtualDom_node('code');
 var $elm$core$Basics$composeR = F3(
 	function (f, g, x) {
@@ -6127,6 +6128,20 @@ var $terezka$elm_diff$Diff$fromString = function (str) {
 		A2($elm$parser$Parser$run, $terezka$elm_diff$Diff$parser, str));
 };
 var $elm$html$Html$h1 = _VirtualDom_node('h1');
+var $elm$json$Json$Encode$string = _Json_wrap;
+var $elm$html$Html$Attributes$stringProperty = F2(
+	function (key, string) {
+		return A2(
+			_VirtualDom_property,
+			key,
+			$elm$json$Json$Encode$string(string));
+	});
+var $elm$html$Html$Attributes$href = function (url) {
+	return A2(
+		$elm$html$Html$Attributes$stringProperty,
+		'href',
+		_VirtualDom_noJavaScriptUri(url));
+};
 var $elm$html$Html$p = _VirtualDom_node('p');
 var $elm$virtual_dom$VirtualDom$style = _VirtualDom_style;
 var $elm$html$Html$Attributes$style = $elm$virtual_dom$VirtualDom$style;
@@ -6547,24 +6562,49 @@ var $terezka$elm_diff$Main$main = A2(
 			_List_Nil,
 			_List_fromArray(
 				[
-					$elm$html$Html$text('A parser for `git diff` output written in Elm. Includes flexible view helpers, too!'),
+					$elm$html$Html$text('Elm helpers for processing and displaying '),
 					A2(
-					$elm$html$Html$p,
+					$elm$html$Html$code,
 					_List_Nil,
 					_List_fromArray(
 						[
-							A2(
-							$elm$html$Html$code,
-							_List_fromArray(
-								[
-									A2($elm$html$Html$Attributes$style, 'padding', '5px 10px'),
-									A2($elm$html$Html$Attributes$style, 'background', 'whitesmoke'),
-									A2($elm$html$Html$Attributes$style, 'border-radius', '5px')
-								]),
-							_List_fromArray(
-								[
-									$elm$html$Html$text('$ elm install terezka/elm-diff')
-								]))
+							$elm$html$Html$text('`git diff`')
+						])),
+					$elm$html$Html$text(' output. Read the full documentation '),
+					A2(
+					$elm$html$Html$a,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$href('https://package.elm-lang.org/packages/terezka/elm-diff/latest'),
+							A2($elm$html$Html$Attributes$style, 'color', 'rgb(5, 142, 218)'),
+							A2($elm$html$Html$Attributes$style, 'text-decoration', 'none')
+						]),
+					_List_fromArray(
+						[
+							$elm$html$Html$text('here')
+						])),
+					$elm$html$Html$text('.')
+				])),
+			A2(
+			$elm$html$Html$p,
+			_List_fromArray(
+				[
+					A2($elm$html$Html$Attributes$style, 'text-align', 'center'),
+					A2($elm$html$Html$Attributes$style, 'margin', '30px 0')
+				]),
+			_List_fromArray(
+				[
+					A2(
+					$elm$html$Html$code,
+					_List_fromArray(
+						[
+							A2($elm$html$Html$Attributes$style, 'padding', '5px 10px'),
+							A2($elm$html$Html$Attributes$style, 'background', 'whitesmoke'),
+							A2($elm$html$Html$Attributes$style, 'border-radius', '5px')
+						]),
+					_List_fromArray(
+						[
+							$elm$html$Html$text('$ elm install terezka/elm-diff')
 						]))
 				])),
 			function () {

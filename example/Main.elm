@@ -14,16 +14,29 @@ main =
     , Attr.style "margin" "50px auto"
     ]
     [ Html.h1 [] [ Html.text "elm diff" ]
-    , Html.p [] [ Html.text "A parser for `git diff` output written in Elm. Includes flexible view helpers, too!"
-    , Html.p [] [
-        Html.code
-          [ Attr.style "padding" "5px 10px"
-          , Attr.style "background" "whitesmoke"
-          , Attr.style "border-radius" "5px"
-          ]
-          [ Html.text "$ elm install terezka/elm-diff" ]
-      ]
-    ]
+    , Html.p []
+        [ Html.text "Elm helpers for processing and displaying "
+        , Html.code [] [ Html.text "`git diff`" ]
+        , Html.text " output. Read the full documentation "
+        , Html.a
+            [ Attr.href "https://package.elm-lang.org/packages/terezka/elm-diff/latest"
+            , Attr.style "color" "rgb(5, 142, 218)"
+            , Attr.style "text-decoration" "none"
+            ]
+            [ Html.text "here" ]
+        , Html.text "."
+        ]
+    , Html.p
+        [ Attr.style "text-align" "center"
+        , Attr.style "margin" "30px 0"
+        ]
+        [ Html.code
+            [ Attr.style "padding" "5px 10px"
+            , Attr.style "background" "whitesmoke"
+            , Attr.style "border-radius" "5px"
+            ]
+            [ Html.text "$ elm install terezka/elm-diff" ]
+        ]
     , case Diff.fromString exampleDiff of
         Ok diffs ->
           Html.div
