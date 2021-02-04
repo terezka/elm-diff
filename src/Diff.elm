@@ -165,6 +165,16 @@ fromString str =
     |> Result.mapError (Error str << String.join "\n" << List.map deadEndToString)
 
 
+{-| The parser error. The `subject` is what has
+been parsed, and the message is what went wrong.
+
+You shouldn't run into this if you're parsing correct
+diffs, but if there are any bugs in the parser, this
+output is helpful.
+
+You can display it using `Ui.Diff.viewError`.
+
+-}
 type alias Error =
   { subject : String
   , message : String
