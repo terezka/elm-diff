@@ -4534,6 +4534,7 @@ var $elm$virtual_dom$VirtualDom$toHandlerInt = function (handler) {
 			return 3;
 	}
 };
+var $elm$html$Html$code = _VirtualDom_node('code');
 var $elm$core$Basics$composeR = F3(
 	function (f, g, x) {
 		return g(
@@ -6546,7 +6547,14 @@ var $terezka$elm_diff$Main$main = A2(
 			_List_Nil,
 			_List_fromArray(
 				[
-					$elm$html$Html$text('A parser for `git diff` output written in Elm. Includes flexible view helpers, too!')
+					$elm$html$Html$text('A parser for `git diff` output written in Elm. Includes flexible view helpers, too!'),
+					A2(
+					$elm$html$Html$code,
+					_List_Nil,
+					_List_fromArray(
+						[
+							$elm$html$Html$text('$ elm install terezka/elm-diff')
+						]))
 				])),
 			function () {
 			var _v0 = $terezka$elm_diff$Diff$fromString($terezka$elm_diff$Main$exampleDiff);

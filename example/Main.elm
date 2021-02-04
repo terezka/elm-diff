@@ -14,7 +14,16 @@ main =
     , Attr.style "margin" "50px auto"
     ]
     [ Html.h1 [] [ Html.text "elm diff" ]
-    , Html.p [] [ Html.text "A parser for `git diff` output written in Elm. Includes flexible view helpers, too!" ]
+    , Html.p [] [ Html.text "A parser for `git diff` output written in Elm. Includes flexible view helpers, too!"
+    , Html.p [] [
+        Html.code
+          [ Attr.style "padding" "5px 10px"
+          , Attr.style "background" "whitesmoke"
+          , Attr.style "border-radius" "5px"
+          ]
+          [ Html.text "$ elm install terezka/elm-diff" ]
+      ]
+    ]
     , case Diff.fromString exampleDiff of
         Ok diffs ->
           Html.div
